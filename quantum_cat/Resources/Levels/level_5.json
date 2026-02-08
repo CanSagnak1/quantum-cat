@@ -1,0 +1,334 @@
+{
+    "id": 5,
+    "name": "Quantum Gauntlet",
+    "difficulty": 5,
+    "description": "The ultimate test. Three fast observers, tight platforms, precise timing required.",
+    "playerStart": {
+        "x": 50,
+        "y": 80
+    },
+    "exitPosition": {
+        "x": 1450,
+        "y": 50
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": 30
+            },
+            "size": {
+                "width": 120,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 200,
+                "y": -20
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 320,
+                "y": 30
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": -30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 580,
+                "y": 20
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 720,
+                "y": -40
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 860,
+                "y": 10
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1000,
+                "y": -50
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1140,
+                "y": 0
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1280,
+                "y": -30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1420,
+                "y": 0
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 260,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 380,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 520,
+                "y": 90
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 650,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 790,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 930,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1070,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1210,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 350,
+                "y": 200
+            },
+            "rotation": 240,
+            "patrolPoints": [
+                {
+                    "x": 200,
+                    "y": 200
+                },
+                {
+                    "x": 500,
+                    "y": 200
+                }
+            ],
+            "detectionAngle": 60,
+            "detectionRange": 240,
+            "patrolSpeed": 100
+        },
+        {
+            "position": {
+                "x": 750,
+                "y": 220
+            },
+            "rotation": 225,
+            "patrolPoints": [
+                {
+                    "x": 600,
+                    "y": 220
+                },
+                {
+                    "x": 950,
+                    "y": 220
+                }
+            ],
+            "detectionAngle": 65,
+            "detectionRange": 260,
+            "patrolSpeed": 110
+        },
+        {
+            "position": {
+                "x": 1150,
+                "y": 200
+            },
+            "rotation": 210,
+            "patrolPoints": [
+                {
+                    "x": 1000,
+                    "y": 200
+                },
+                {
+                    "x": 1350,
+                    "y": 200
+                }
+            ],
+            "detectionAngle": 55,
+            "detectionRange": 250,
+            "patrolSpeed": 120
+        }
+    ],
+    "orbs": [
+        {
+            "x": 140,
+            "y": 80
+        },
+        {
+            "x": 260,
+            "y": 130
+        },
+        {
+            "x": 390,
+            "y": 120
+        },
+        {
+            "x": 520,
+            "y": 140
+        },
+        {
+            "x": 650,
+            "y": 130
+        },
+        {
+            "x": 790,
+            "y": 120
+        },
+        {
+            "x": 930,
+            "y": 130
+        },
+        {
+            "x": 1070,
+            "y": 120
+        },
+        {
+            "x": 1210,
+            "y": 130
+        },
+        {
+            "x": 1350,
+            "y": 50
+        }
+    ],
+    "parTime": 75,
+    "requiredOrbs": 6,
+    "backgroundTheme": "quantum_void"
+}

@@ -1,0 +1,133 @@
+{
+    "id": 2,
+    "name": "The Watcher",
+    "difficulty": 2,
+    "description": "A stationary observer guards the path. Time your movements carefully.",
+    "playerStart": {
+        "x": 50,
+        "y": -50
+    },
+    "exitPosition": {
+        "x": 1050,
+        "y": -120
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": -100
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 280,
+                "y": -70
+            },
+            "size": {
+                "width": 120,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": -100
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 650,
+                "y": -130
+            },
+            "size": {
+                "width": 120,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 820,
+                "y": -160
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1020,
+                "y": -170
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 550,
+                "y": -30
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 550,
+                "y": 80
+            },
+            "rotation": 200,
+            "patrolPoints": null,
+            "detectionAngle": 50,
+            "detectionRange": 180,
+            "patrolSpeed": 0
+        }
+    ],
+    "orbs": [
+        {
+            "x": 180,
+            "y": -20
+        },
+        {
+            "x": 360,
+            "y": -20
+        },
+        {
+            "x": 550,
+            "y": 20
+        },
+        {
+            "x": 730,
+            "y": -80
+        },
+        {
+            "x": 920,
+            "y": -110
+        }
+    ],
+    "parTime": 30,
+    "requiredOrbs": 3,
+    "backgroundTheme": "space_purple"
+}

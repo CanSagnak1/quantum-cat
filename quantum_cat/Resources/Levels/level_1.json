@@ -1,0 +1,94 @@
+{
+    "id": 1,
+    "name": "First Steps",
+    "difficulty": 1,
+    "description": "Learn the basics: move, jump, and collect orbs to reach the portal.",
+    "playerStart": {
+        "x": 50,
+        "y": -50
+    },
+    "exitPosition": {
+        "x": 880,
+        "y": -50
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": -100
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 280,
+                "y": -100
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 460,
+                "y": -100
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 640,
+                "y": -100
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 840,
+                "y": -100
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [],
+    "observers": [],
+    "orbs": [
+        {
+            "x": 180,
+            "y": -50
+        },
+        {
+            "x": 370,
+            "y": -50
+        },
+        {
+            "x": 550,
+            "y": -50
+        },
+        {
+            "x": 740,
+            "y": -50
+        }
+    ],
+    "parTime": 20,
+    "requiredOrbs": 2,
+    "backgroundTheme": "space_blue"
+}

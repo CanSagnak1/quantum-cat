@@ -1,0 +1,240 @@
+{
+    "id": 8,
+    "name": "Schrödinger's Maze",
+    "difficulty": 4,
+    "description": "Quantum platforms are essential. Master the split to navigate the maze.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1350,
+        "y": 100
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": -50
+            },
+            "size": {
+                "width": 130,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 250,
+                "y": -30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 520,
+                "y": -60
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 800,
+                "y": -40
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1050,
+                "y": -20
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1300,
+                "y": 50
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 370,
+                "y": 20
+            },
+            "size": {
+                "width": 90,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": 70
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 640,
+                "y": 30
+            },
+            "size": {
+                "width": 90,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 730,
+                "y": 80
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 920,
+                "y": 40
+            },
+            "size": {
+                "width": 90,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1000,
+                "y": 90
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1170,
+                "y": 50
+            },
+            "size": {
+                "width": 90,
+                "height": 18
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 500,
+                "y": 200
+            },
+            "rotation": 225,
+            "patrolPoints": [
+                {
+                    "x": 350,
+                    "y": 200
+                },
+                {
+                    "x": 700,
+                    "y": 200
+                }
+            ],
+            "detectionAngle": 50,
+            "detectionRange": 190,
+            "patrolSpeed": 80
+        },
+        {
+            "position": {
+                "x": 1000,
+                "y": 220
+            },
+            "rotation": 220,
+            "patrolPoints": [
+                {
+                    "x": 850,
+                    "y": 220
+                },
+                {
+                    "x": 1200,
+                    "y": 220
+                }
+            ],
+            "detectionAngle": 55,
+            "detectionRange": 200,
+            "patrolSpeed": 70
+        }
+    ],
+    "orbs": [
+        {
+            "x": 160,
+            "y": 0
+        },
+        {
+            "x": 370,
+            "y": 70
+        },
+        {
+            "x": 450,
+            "y": 120
+        },
+        {
+            "x": 640,
+            "y": 80
+        },
+        {
+            "x": 730,
+            "y": 130
+        },
+        {
+            "x": 920,
+            "y": 90
+        },
+        {
+            "x": 1100,
+            "y": 30
+        },
+        {
+            "x": 1250,
+            "y": 100
+        }
+    ],
+    "parTime": 55,
+    "requiredOrbs": 5,
+    "backgroundTheme": "nebula_gold"
+}

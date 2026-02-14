@@ -8,6 +8,16 @@
 import CoreGraphics
 import Foundation
 
+struct TutorialHint: Codable {
+    let position: PointData
+    let text: String
+    let icon: String?
+
+    func cgPosition() -> CGPoint {
+        return CGPoint(x: position.x, y: position.y)
+    }
+}
+
 struct LevelData: Codable {
     let id: Int
     let name: String
@@ -22,18 +32,19 @@ struct LevelData: Codable {
     let parTime: TimeInterval
     let requiredOrbs: Int
     let backgroundTheme: String?
+    let tutorialHints: [TutorialHint]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, difficulty, description, playerStart, exitPosition
         case platforms, observers, orbs, parTime, requiredOrbs, backgroundTheme
         case quantumPlatforms = "betaPlatforms"
+        case tutorialHints
     }
 
     func isValid() -> Bool {
         guard id > 0 else { return false }
         guard difficulty >= 1 && difficulty <= 5 else { return false }
-        guard playerStart.x >= 0 && playerStart.y >= 0 else { return false }
-        guard exitPosition.x >= 0 && exitPosition.y >= 0 else { return false }
+        guard !platforms.isEmpty else { return false }
         guard parTime > 0 else { return false }
         guard requiredOrbs >= 0 && requiredOrbs <= orbs.count else { return false }
         return true

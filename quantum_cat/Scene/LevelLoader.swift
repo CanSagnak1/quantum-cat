@@ -22,87 +22,15 @@ class LevelLoader {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let levelData = try decoder.decode(LevelData.self, from: data)
+            guard levelData.isValid() else {
+                print("[LevelLoader] Level \(id) failed validation")
+                return nil
+            }
             return levelData
         } catch {
+            print("[LevelLoader] Failed to decode level \(id): \(error)")
             return nil
         }
-    }
-
-    func configureScene(_ scene: GameScene, with levelData: LevelData) {
-        scene.removeAllChildren()
-
-        scene.backgroundColor = SKColor(red: 0.1, green: 0.1, blue: 0.15, alpha: 1.0)
-        scene.physicsWorld.gravity = CGVector(dx: 0, dy: -12.0)
-
-        let camera = SKCameraNode()
-        scene.camera = camera
-        scene.addChild(camera)
-
-        for platformData in levelData.platforms {
-            let platform = createPlatform(data: platformData, isBeta: false)
-            scene.addChild(platform)
-        }
-
-        for quantumPlatData in levelData.quantumPlatforms {
-            let platform = createPlatform(data: quantumPlatData, isBeta: true)
-            scene.addChild(platform)
-        }
-
-        for observerData in levelData.observers {
-            let observer = createObserver(data: observerData)
-            scene.addChild(observer)
-        }
-
-        for orbPos in levelData.orbs {
-            let orb = QuantumOrb()
-            orb.position = orbPos.cgPoint()
-            scene.addChild(orb)
-        }
-
-        let player = PlayerEntity()
-        player.position = levelData.playerStart.cgPoint()
-        scene.player = player
-        scene.addChild(player)
-
-        let door = ExitDoor()
-        door.position = levelData.exitPosition.cgPoint()
-        scene.addChild(door)
-    }
-
-    private func createPlatform(data: PlatformData, isBeta: Bool) -> SKShapeNode {
-        let platform = SKShapeNode(rectOf: data.cgSize())
-        platform.position = data.cgPosition()
-
-        if isBeta {
-            platform.fillColor = SKColor.purple.withAlphaComponent(0.3)
-            platform.strokeColor = .purple
-            platform.alpha = 0.2
-            platform.name = "betaPlatform"
-            platform.physicsBody = SKPhysicsBody(rectangleOf: data.cgSize())
-            platform.physicsBody?.isDynamic = false
-            platform.physicsBody?.categoryBitMask = 0
-        } else {
-            platform.fillColor = SKColor(red: 0.3, green: 0.3, blue: 0.35, alpha: 1.0)
-            platform.strokeColor = .white
-            platform.physicsBody = SKPhysicsBody(rectangleOf: data.cgSize())
-            platform.physicsBody?.isDynamic = false
-            platform.physicsBody?.categoryBitMask = 0x1 << 1
-            platform.physicsBody?.collisionBitMask = 0x1 << 0
-        }
-
-        return platform
-    }
-
-    private func createObserver(data: ObserverData) -> ObserverEntity {
-        let observer = ObserverEntity()
-        observer.position = data.cgPosition()
-        observer.zRotation = data.rotation
-
-        if !data.cgPatrolPoints().isEmpty {
-            observer.setPatrol(points: data.cgPatrolPoints())
-        }
-
-        return observer
     }
 
     func createDefaultLevel() -> LevelData {
@@ -144,7 +72,8 @@ class LevelLoader {
             ],
             parTime: 30,
             requiredOrbs: 0,
-            backgroundTheme: "space_blue"
+            backgroundTheme: "space_blue",
+            tutorialHints: nil
         )
     }
 }

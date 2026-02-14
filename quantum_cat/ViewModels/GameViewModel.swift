@@ -21,15 +21,16 @@ class GameViewModel: ObservableObject, GameSceneDelegate {
     private var stabilityTimer: Timer?
     private var gameTimer: Timer?
 
-    var isGameRunning: Bool { state == .playing }
     var isPlaying: Bool { state == .playing }
 
     weak var scene: GameScene?
 
     func startGame() {
-        state = .playing
+        stopTimers()
         resetGame()
+        state = .playing
         startTimers()
+        MusicEngine.shared.startMusic()
     }
 
     func resetGame() {
@@ -39,20 +40,26 @@ class GameViewModel: ObservableObject, GameSceneDelegate {
         orbsCollected = 0
         elapsedTime = 0
         movementDirection = 0
+
+        scene?.restartLevel()
     }
 
     private func startTimers() {
         stabilityTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) {
             [weak self] _ in
-            guard let self = self else { return }
-            guard self.isSplit, self.state == .playing else { return }
-            self.drainStability(amount: 0.005)
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                guard self.isSplit, self.state == .playing else { return }
+                self.drainStability(amount: 0.005)
+            }
         }
 
         gameTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            guard self.state == .playing else { return }
-            self.elapsedTime += 1
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                guard self.state == .playing else { return }
+                self.elapsedTime += 1
+            }
         }
     }
 
@@ -72,11 +79,13 @@ class GameViewModel: ObservableObject, GameSceneDelegate {
     func gameOver() {
         stopTimers()
         state = .gameOver
+        MusicEngine.shared.stopMusic()
     }
 
     func returnToMenu() {
         stopTimers()
         state = .menu
+        MusicEngine.shared.stopMusic()
     }
 
     func updateMovement(direction: CGFloat) {

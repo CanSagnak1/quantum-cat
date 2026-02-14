@@ -1,0 +1,371 @@
+{
+    "id": 10,
+    "name": "The Final Observation",
+    "difficulty": 5,
+    "description": "The ultimate quantum challenge. Three relentless observers, every skill required.",
+    "playerStart": {
+        "x": 50,
+        "y": 80
+    },
+    "exitPosition": {
+        "x": 1550,
+        "y": 50
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": 30
+            },
+            "size": {
+                "width": 110,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 210,
+                "y": -20
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 340,
+                "y": 30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 470,
+                "y": -30
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 600,
+                "y": 20
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 730,
+                "y": -40
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 860,
+                "y": 10
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 990,
+                "y": -30
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1120,
+                "y": 20
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1250,
+                "y": -40
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1380,
+                "y": -10
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1520,
+                "y": 0
+            },
+            "size": {
+                "width": 130,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 270,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 400,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 530,
+                "y": 90
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 660,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 790,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 920,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1050,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1180,
+                "y": 80
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1310,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1450,
+                "y": 60
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 350,
+                "y": 220
+            },
+            "rotation": 240,
+            "patrolPoints": [
+                {
+                    "x": 150,
+                    "y": 220
+                },
+                {
+                    "x": 550,
+                    "y": 220
+                }
+            ],
+            "detectionAngle": 60,
+            "detectionRange": 250,
+            "patrolSpeed": 110
+        },
+        {
+            "position": {
+                "x": 800,
+                "y": 240
+            },
+            "rotation": 225,
+            "patrolPoints": [
+                {
+                    "x": 600,
+                    "y": 240
+                },
+                {
+                    "x": 1050,
+                    "y": 240
+                }
+            ],
+            "detectionAngle": 65,
+            "detectionRange": 260,
+            "patrolSpeed": 115
+        },
+        {
+            "position": {
+                "x": 1300,
+                "y": 220
+            },
+            "rotation": 210,
+            "patrolPoints": [
+                {
+                    "x": 1050,
+                    "y": 220
+                },
+                {
+                    "x": 1500,
+                    "y": 220
+                }
+            ],
+            "detectionAngle": 55,
+            "detectionRange": 260,
+            "patrolSpeed": 125
+        }
+    ],
+    "orbs": [
+        {
+            "x": 140,
+            "y": 80
+        },
+        {
+            "x": 270,
+            "y": 130
+        },
+        {
+            "x": 400,
+            "y": 130
+        },
+        {
+            "x": 530,
+            "y": 140
+        },
+        {
+            "x": 660,
+            "y": 130
+        },
+        {
+            "x": 790,
+            "y": 120
+        },
+        {
+            "x": 920,
+            "y": 130
+        },
+        {
+            "x": 1050,
+            "y": 120
+        },
+        {
+            "x": 1180,
+            "y": 130
+        },
+        {
+            "x": 1310,
+            "y": 120
+        },
+        {
+            "x": 1450,
+            "y": 110
+        }
+    ],
+    "parTime": 90,
+    "requiredOrbs": 7,
+    "backgroundTheme": "singularity"
+}

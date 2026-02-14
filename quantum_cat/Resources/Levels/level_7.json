@@ -1,0 +1,225 @@
+{
+    "id": 7,
+    "name": "The Observer Network",
+    "difficulty": 3,
+    "description": "Two observers patrol in crossing patterns. Find the gaps in their vision.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1300,
+        "y": -30
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": -50
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 260,
+                "y": -30
+            },
+            "size": {
+                "width": 120,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 420,
+                "y": -60
+            },
+            "size": {
+                "width": 100,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 580,
+                "y": -20
+            },
+            "size": {
+                "width": 110,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 740,
+                "y": -50
+            },
+            "size": {
+                "width": 100,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 900,
+                "y": -30
+            },
+            "size": {
+                "width": 120,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1060,
+                "y": -60
+            },
+            "size": {
+                "width": 100,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1200,
+                "y": -80
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1300,
+                "y": -80
+            },
+            "size": {
+                "width": 140,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 340,
+                "y": 30
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 660,
+                "y": 40
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 980,
+                "y": 30
+            },
+            "size": {
+                "width": 80,
+                "height": 18
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 450,
+                "y": 160
+            },
+            "rotation": 210,
+            "patrolPoints": [
+                {
+                    "x": 250,
+                    "y": 160
+                },
+                {
+                    "x": 650,
+                    "y": 160
+                }
+            ],
+            "detectionAngle": 55,
+            "detectionRange": 200,
+            "patrolSpeed": 70
+        },
+        {
+            "position": {
+                "x": 950,
+                "y": 180
+            },
+            "rotation": 230,
+            "patrolPoints": [
+                {
+                    "x": 750,
+                    "y": 180
+                },
+                {
+                    "x": 1150,
+                    "y": 180
+                }
+            ],
+            "detectionAngle": 50,
+            "detectionRange": 210,
+            "patrolSpeed": 75
+        }
+    ],
+    "orbs": [
+        {
+            "x": 170,
+            "y": 0
+        },
+        {
+            "x": 340,
+            "y": 80
+        },
+        {
+            "x": 500,
+            "y": 30
+        },
+        {
+            "x": 660,
+            "y": 90
+        },
+        {
+            "x": 820,
+            "y": 20
+        },
+        {
+            "x": 980,
+            "y": 80
+        },
+        {
+            "x": 1140,
+            "y": -10
+        }
+    ],
+    "parTime": 50,
+    "requiredOrbs": 5,
+    "backgroundTheme": "deep_space"
+}

@@ -1,0 +1,255 @@
+{
+    "id": 9,
+    "name": "Phase Shift",
+    "difficulty": 4,
+    "description": "Fast observers and narrow platforms demand perfect timing and precision.",
+    "playerStart": {
+        "x": 50,
+        "y": 50
+    },
+    "exitPosition": {
+        "x": 1400,
+        "y": -20
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": 0
+            },
+            "size": {
+                "width": 120,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 220,
+                "y": -30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 350,
+                "y": 10
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 490,
+                "y": -40
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 630,
+                "y": 20
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 770,
+                "y": -30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 910,
+                "y": 10
+            },
+            "size": {
+                "width": 90,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1060,
+                "y": -50
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1200,
+                "y": -20
+            },
+            "size": {
+                "width": 70,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1370,
+                "y": -70
+            },
+            "size": {
+                "width": 130,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 280,
+                "y": 60
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 560,
+                "y": 70
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 840,
+                "y": 60
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1130,
+                "y": 50
+            },
+            "size": {
+                "width": 70,
+                "height": 18
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 400,
+                "y": 180
+            },
+            "rotation": 235,
+            "patrolPoints": [
+                {
+                    "x": 200,
+                    "y": 180
+                },
+                {
+                    "x": 600,
+                    "y": 180
+                }
+            ],
+            "detectionAngle": 55,
+            "detectionRange": 220,
+            "patrolSpeed": 95
+        },
+        {
+            "position": {
+                "x": 900,
+                "y": 200
+            },
+            "rotation": 220,
+            "patrolPoints": [
+                {
+                    "x": 700,
+                    "y": 200
+                },
+                {
+                    "x": 1100,
+                    "y": 200
+                }
+            ],
+            "detectionAngle": 60,
+            "detectionRange": 230,
+            "patrolSpeed": 100
+        }
+    ],
+    "orbs": [
+        {
+            "x": 150,
+            "y": 50
+        },
+        {
+            "x": 280,
+            "y": 110
+        },
+        {
+            "x": 420,
+            "y": 10
+        },
+        {
+            "x": 560,
+            "y": 120
+        },
+        {
+            "x": 700,
+            "y": 70
+        },
+        {
+            "x": 840,
+            "y": 110
+        },
+        {
+            "x": 980,
+            "y": 60
+        },
+        {
+            "x": 1130,
+            "y": 100
+        },
+        {
+            "x": 1280,
+            "y": 30
+        }
+    ],
+    "parTime": 60,
+    "requiredOrbs": 6,
+    "backgroundTheme": "void_crimson"
+}

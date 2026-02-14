@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GameState {
+enum GameState: Equatable, Sendable {
     case menu
     case playing
     case levelComplete

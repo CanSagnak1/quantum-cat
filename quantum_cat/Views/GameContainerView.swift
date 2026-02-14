@@ -52,11 +52,10 @@ struct GameContainerView: View {
                 ControlsOverlay(viewModel: viewModel)
             }
 
-            if isPaused {
+            if isPaused && viewModel.state == .playing {
                 PauseMenuView(viewModel: viewModel, isPaused: $isPaused)
             }
         }
-        .allowsHitTesting(viewModel.isPlaying)
         .onAppear {
             setupScene()
         }
@@ -65,7 +64,10 @@ struct GameContainerView: View {
         }
         .onChange(of: viewModel.state) { oldValue, newState in
             if newState == .playing {
+                isPaused = false
                 setupScene()
+            } else {
+                isPaused = false
             }
         }
     }

@@ -141,14 +141,16 @@ struct LevelCompleteView: View {
             }
         }
         .onAppear {
+            let parTime = currentLevelData?.parTime ?? 25
+            let totalOrbs = currentLevelData?.orbs.count ?? 4
             GameProgressManager.shared.completeLevel(
                 viewModel.currentLevel,
                 score: viewModel.score,
                 time: viewModel.elapsedTime,
-                parTime: 25,
+                parTime: parTime,
                 wasCollapsed: false,
                 orbsCollected: viewModel.orbsCollected,
-                totalOrbs: 4
+                totalOrbs: totalOrbs
             )
         }
     }

@@ -17,6 +17,11 @@ struct LevelSelectView: View {
         ("Patrol Protocol", 3),
         ("Double Vision", 4),
         ("Quantum Collapse", 5),
+        ("Quantum Corridors", 3),
+        ("Observer Network", 3),
+        ("Schrödinger's Maze", 4),
+        ("Phase Shift", 4),
+        ("Final Observation", 5),
     ]
 
     var body: some View {
@@ -53,7 +58,7 @@ struct LevelSelectView: View {
 
                 ScrollView {
                     VStack(spacing: 12) {
-                        ForEach(0..<5, id: \.self) { index in
+                        ForEach(0..<10, id: \.self) { index in
                             let levelId = index + 1
                             let info = levelInfo[index]
                             let isUnlocked =

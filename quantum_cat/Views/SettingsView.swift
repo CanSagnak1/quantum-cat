@@ -12,6 +12,7 @@ struct SettingsView: View {
     @AppStorage("soundEnabled") private var soundEnabled = true
     @AppStorage("musicEnabled") private var musicEnabled = true
     @AppStorage("hapticsEnabled") private var hapticsEnabled = true
+    @State private var showResetAlert = false
 
     var body: some View {
         ZStack {
@@ -69,7 +70,9 @@ struct SettingsView: View {
 
                 Spacer()
 
-                Button(action: {}) {
+                Button(action: {
+                    showResetAlert = true
+                }) {
                     HStack {
                         Image(systemName: "arrow.counterclockwise")
                         Text("Reset Progress")
@@ -88,6 +91,16 @@ struct SettingsView: View {
                     .padding(.bottom, 20)
             }
             .padding(.top, 20)
+        }
+        .alert("Reset Progress", isPresented: $showResetAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Reset", role: .destructive) {
+                GameProgressManager.shared.resetProgress()
+            }
+        } message: {
+            Text(
+                "Are you sure? All level progress, stars, and high scores will be permanently deleted."
+            )
         }
     }
 }

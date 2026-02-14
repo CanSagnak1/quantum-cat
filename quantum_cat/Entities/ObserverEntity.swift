@@ -21,7 +21,7 @@ class ObserverEntity: SKNode {
 
     var patrolPoints: [CGPoint] = []
     private var currentPatrolIndex: Int = 0
-    private var patrolSpeed: CGFloat = 50.0
+    var patrolSpeed: CGFloat = 50.0
 
     static let categoryBitMask: UInt32 = 0x1 << 3
 
@@ -69,8 +69,6 @@ class ObserverEntity: SKNode {
         addChild(visionCone)
         addChild(bodyNode)
         addChild(warningIndicator)
-
-        startScanningAnimation()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -84,7 +82,40 @@ class ObserverEntity: SKNode {
         let pause = SKAction.wait(forDuration: 0.5)
         let sequence = SKAction.sequence([rotateLeft, pause, rotateRight, pause])
         run(SKAction.repeatForever(sequence))
+    }
 
+    func setPatrol(points: [CGPoint]) {
+        patrolPoints = points
+        if !points.isEmpty {
+            position = points[0]
+        }
+    }
+
+    func rebuildVisionCone() {
+        let path = CGMutablePath()
+        path.move(to: .zero)
+        let leftPoint = CGPoint(
+            x: visionRange * cos(visionAngle / 2),
+            y: visionRange * sin(visionAngle / 2)
+        )
+        let rightPoint = CGPoint(
+            x: visionRange * cos(-visionAngle / 2),
+            y: visionRange * sin(-visionAngle / 2)
+        )
+        path.addLine(to: leftPoint)
+        path.addLine(to: rightPoint)
+        path.closeSubpath()
+        visionCone.path = path
+    }
+
+    func startAnimations() {
+        if patrolPoints.count <= 1 {
+            startScanningAnimation()
+        }
+        startLensBlinkAnimation()
+    }
+
+    private func startLensBlinkAnimation() {
         let lensNode = bodyNode.children.first as? SKShapeNode
         let blink = SKAction.sequence([
             SKAction.run { lensNode?.strokeColor = SKColor.red },
@@ -93,13 +124,6 @@ class ObserverEntity: SKNode {
             SKAction.wait(forDuration: 0.5),
         ])
         bodyNode.run(SKAction.repeatForever(blink))
-    }
-
-    func setPatrol(points: [CGPoint]) {
-        patrolPoints = points
-        if !points.isEmpty {
-            position = points[0]
-        }
     }
 
     func updatePatrol(deltaTime: TimeInterval) {

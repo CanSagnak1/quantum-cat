@@ -129,5 +129,23 @@
     ],
     "parTime": 30,
     "requiredOrbs": 3,
-    "backgroundTheme": "space_purple"
+    "backgroundTheme": "space_purple",
+    "tutorialHints": [
+        {
+            "position": {
+                "x": 350,
+                "y": 30
+            },
+            "text": "Avoid the Observer's Gaze!",
+            "icon": "👁️"
+        },
+        {
+            "position": {
+                "x": 500,
+                "y": 30
+            },
+            "text": "Quantum Split to use purple platforms",
+            "icon": "🔮"
+        }
+    ]
 }

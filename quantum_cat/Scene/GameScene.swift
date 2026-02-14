@@ -19,10 +19,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private var quantumPlatforms: [SKNode] = []
     private var parallaxLayers: [SKNode] = []
+    private var tutorialHints: [TutorialHintNode] = []
 
     var currentLevelId: Int = 1
     private var levelData: LevelData?
     private var lastUpdateTime: TimeInterval = 0
+    private var levelEnded: Bool = false
 
     struct PhysicsCategory {
         static let player: UInt32 = 0x1 << 0
@@ -52,6 +54,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         loadLevel(id: currentLevelId)
     }
 
+    func restartLevel() {
+        removeAllChildren()
+        removeAllActions()
+        observers = []
+        orbs = []
+        quantumPlatforms = []
+        parallaxLayers = []
+        tutorialHints = []
+        lastUpdateTime = 0
+
+        setupWorld()
+        setupParallaxBackground()
+        setupCamera()
+        loadLevel(id: currentLevelId)
+    }
+
     private func loadLevel(id: Int) {
         if let data = LevelLoader.shared.loadLevel(id: id) {
             levelData = data
@@ -62,6 +80,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     private func setupLevelFromData(_ data: LevelData) {
+        levelEnded = false
         player = PlayerEntity()
         player.position = data.playerStart.cgPoint()
         addChild(player)
@@ -79,10 +98,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             observer.position = observerData.cgPosition()
             observer.zRotation = observerData.rotation * .pi / 180
 
+            if let angle = observerData.detectionAngle {
+                observer.visionAngle = angle * .pi / 180
+            }
+            if let range = observerData.detectionRange {
+                observer.visionRange = range
+            }
+            if let speed = observerData.patrolSpeed {
+                observer.patrolSpeed = speed
+            }
+
             if let patrolPoints = observerData.patrolPoints, !patrolPoints.isEmpty {
                 let cgPoints = patrolPoints.map { $0.cgPoint() }
                 observer.setPatrol(points: cgPoints)
             }
+
+            observer.rebuildVisionCone()
+            observer.startAnimations()
 
             addChild(observer)
             observers.append(observer)
@@ -98,6 +130,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         exitDoor = ExitDoor()
         exitDoor.position = data.exitPosition.cgPoint()
         addChild(exitDoor)
+
+        if let hints = data.tutorialHints {
+            for hintData in hints {
+                let hintNode = TutorialHintNode(text: hintData.text, icon: hintData.icon)
+                hintNode.position = hintData.cgPosition()
+                addChild(hintNode)
+                tutorialHints.append(hintNode)
+            }
+        }
     }
 
     private func setupWorld() {
@@ -163,6 +204,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         quantumPlat.physicsBody = SKPhysicsBody(rectangleOf: size)
         quantumPlat.physicsBody?.isDynamic = false
         quantumPlat.physicsBody?.categoryBitMask = 0
+        quantumPlat.physicsBody?.collisionBitMask = PhysicsCategory.player
 
         addChild(quantumPlat)
         quantumPlatforms.append(quantumPlat)
@@ -178,17 +220,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let deltaTime = lastUpdateTime > 0 ? currentTime - lastUpdateTime : 0
         lastUpdateTime = currentTime
 
-        guard player != nil else { return }
+        guard player != nil, !levelEnded else { return }
 
         checkFallDeath()
         updateCamera()
         updateObservers(deltaTime: deltaTime)
         checkObserverDetection()
+        updateTutorialHints()
     }
 
     private func checkFallDeath() {
         let fallThreshold: CGFloat = -500
         if player.position.y < fallThreshold {
+            levelEnded = true
             gameDelegate?.sceneDidPlayerFall()
         }
     }
@@ -235,6 +279,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if (maskA == PhysicsCategory.player && maskB == PhysicsCategory.door)
             || (maskA == PhysicsCategory.door && maskB == PhysicsCategory.player)
         {
+            guard !levelEnded else { return }
+            levelEnded = true
             gameDelegate?.sceneDidReachExit()
             AudioManager.shared.playSound(.levelComplete)
             AudioManager.shared.playNotificationHaptic(.success)
@@ -252,13 +298,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         orbs.remove(at: index)
         gameDelegate?.sceneDidCollectOrb(stabilityBonus: 0.1)
-
-        let scale = SKAction.scale(to: 1.5, duration: 0.15)
-        let fade = SKAction.fadeOut(withDuration: 0.15)
-        let group = SKAction.group([scale, fade])
-        let remove = SKAction.removeFromParent()
-
-        orb.run(SKAction.sequence([group, remove]))
+        orb.collect()
 
         AudioManager.shared.playSound(.orbPickup)
         AudioManager.shared.playHaptic(.light)
@@ -278,5 +318,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     private func lerp(start: CGFloat, end: CGFloat, t: CGFloat) -> CGFloat {
         return start + (end - start) * t
+    }
+
+    private func updateTutorialHints() {
+        guard player != nil else { return }
+        for hint in tutorialHints {
+            hint.checkProximity(to: player.position)
+        }
+        tutorialHints.removeAll { $0.parent == nil }
     }
 }

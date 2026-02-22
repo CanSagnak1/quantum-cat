@@ -1,0 +1,102 @@
+{
+    "id": 17,
+    "name": "The Void",
+    "difficulty": 3,
+    "description": "A massive gap with only quantum platforms. Plan your route carefully.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1500,
+        "y": 0
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 100,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1400,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 400,
+                "y": -20
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 700,
+                "y": 20
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1000,
+                "y": -20
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1200,
+                "y": 30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [],
+    "orbs": [
+        {
+            "x": 400,
+            "y": 20
+        },
+        {
+            "x": 700,
+            "y": 60
+        },
+        {
+            "x": 1000,
+            "y": 20
+        }
+    ],
+    "parTime": 25,
+    "requiredOrbs": 3,
+    "backgroundTheme": "space_blue"
+}

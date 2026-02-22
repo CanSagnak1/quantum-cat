@@ -1,0 +1,180 @@
+{
+    "id": 22,
+    "name": "The Gauntlet",
+    "difficulty": 5,
+    "description": "Sequential micro-challenges without resting platforms.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1450,
+        "y": 0
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 100,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 400,
+                "y": -20
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 700,
+                "y": 30
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1000,
+                "y": -10
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1300,
+                "y": 40
+            },
+            "size": {
+                "width": 80,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1500,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 550,
+                "y": 10
+            },
+            "size": {
+                "width": 70,
+                "height": 15
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 850,
+                "y": 20
+            },
+            "size": {
+                "width": 70,
+                "height": 15
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 1150,
+                "y": 10
+            },
+            "size": {
+                "width": 70,
+                "height": 15
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 400,
+                "y": 200
+            },
+            "rotation": 270,
+            "detectionAngle": 40,
+            "detectionRange": 250,
+            "patrolSpeed": 60,
+            "patrolPoints": []
+        },
+        {
+            "position": {
+                "x": 700,
+                "y": 200
+            },
+            "rotation": 270,
+            "detectionAngle": 40,
+            "detectionRange": 250,
+            "patrolSpeed": 90,
+            "patrolPoints": []
+        },
+        {
+            "position": {
+                "x": 1000,
+                "y": 200
+            },
+            "rotation": 270,
+            "detectionAngle": 40,
+            "detectionRange": 250,
+            "patrolSpeed": 120,
+            "patrolPoints": []
+        },
+        {
+            "position": {
+                "x": 1300,
+                "y": 200
+            },
+            "rotation": 270,
+            "detectionAngle": 40,
+            "detectionRange": 250,
+            "patrolSpeed": 150,
+            "patrolPoints": []
+        }
+    ],
+    "orbs": [
+        {
+            "x": 550,
+            "y": 60
+        },
+        {
+            "x": 850,
+            "y": 70
+        },
+        {
+            "x": 1150,
+            "y": 60
+        }
+    ],
+    "parTime": 35,
+    "requiredOrbs": 3,
+    "backgroundTheme": "singularity"
+}

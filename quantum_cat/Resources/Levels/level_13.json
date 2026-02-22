@@ -1,0 +1,162 @@
+{
+    "id": 13,
+    "name": "The Pendulum",
+    "difficulty": 3,
+    "description": "Fast moving observers swing back and forth. Timing is everything.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1100,
+        "y": 0
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 80,
+                "y": -50
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 350,
+                "y": -50
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 600,
+                "y": -50
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 850,
+                "y": -50
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1080,
+                "y": -50
+            },
+            "size": {
+                "width": 160,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 475,
+                "y": 20
+            },
+            "size": {
+                "width": 80,
+                "height": 20
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 725,
+                "y": 20
+            },
+            "size": {
+                "width": 80,
+                "height": 20
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 250,
+                "y": 200
+            },
+            "rotation": 270,
+            "detectionAngle": 45,
+            "detectionRange": 250,
+            "patrolSpeed": 200,
+            "patrolPoints": [
+                {
+                    "x": 200,
+                    "y": 200
+                },
+                {
+                    "x": 450,
+                    "y": 200
+                }
+            ]
+        },
+        {
+            "position": {
+                "x": 800,
+                "y": 200
+            },
+            "rotation": 270,
+            "detectionAngle": 45,
+            "detectionRange": 250,
+            "patrolSpeed": 250,
+            "patrolPoints": [
+                {
+                    "x": 700,
+                    "y": 200
+                },
+                {
+                    "x": 950,
+                    "y": 200
+                }
+            ]
+        }
+    ],
+    "orbs": [
+        {
+            "x": 350,
+            "y": 20
+        },
+        {
+            "x": 475,
+            "y": 60
+        },
+        {
+            "x": 600,
+            "y": 20
+        },
+        {
+            "x": 725,
+            "y": 60
+        },
+        {
+            "x": 850,
+            "y": 20
+        }
+    ],
+    "parTime": 35,
+    "requiredOrbs": 4,
+    "backgroundTheme": "space_blue"
+}

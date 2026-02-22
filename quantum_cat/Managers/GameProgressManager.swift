@@ -68,7 +68,7 @@ class GameProgressManager: ObservableObject {
         }
 
         let nextLevel = levelId + 1
-        if nextLevel <= 10 {
+        if nextLevel <= 30 {
             progress.unlockedLevels.insert(nextLevel)
         }
 

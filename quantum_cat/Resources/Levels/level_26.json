@@ -1,0 +1,144 @@
+{
+    "id": 26,
+    "name": "The Spiral",
+    "difficulty": 4,
+    "description": "Spiral upwards around the sweeping observer rays.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 450,
+        "y": 600
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 100,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 800,
+                "y": 100
+            },
+            "size": {
+                "width": 100,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 800,
+                "y": 300
+            },
+            "size": {
+                "width": 100,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 100,
+                "y": 450
+            },
+            "size": {
+                "width": 100,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": 550
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [
+        {
+            "position": {
+                "x": 450,
+                "y": 0
+            },
+            "size": {
+                "width": 80,
+                "height": 20
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": 200
+            },
+            "size": {
+                "width": 80,
+                "height": 20
+            },
+            "type": "beta"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": 400
+            },
+            "size": {
+                "width": 80,
+                "height": 20
+            },
+            "type": "beta"
+        }
+    ],
+    "observers": [
+        {
+            "position": {
+                "x": 450,
+                "y": 250
+            },
+            "rotation": 0,
+            "detectionAngle": 45,
+            "detectionRange": 450,
+            "patrolSpeed": 45,
+            "patrolPoints": []
+        }
+    ],
+    "orbs": [
+        {
+            "x": 450,
+            "y": 50
+        },
+        {
+            "x": 800,
+            "y": 150
+        },
+        {
+            "x": 450,
+            "y": 250
+        },
+        {
+            "x": 800,
+            "y": 350
+        },
+        {
+            "x": 100,
+            "y": 500
+        }
+    ],
+    "parTime": 45,
+    "requiredOrbs": 5,
+    "backgroundTheme": "singularity"
+}

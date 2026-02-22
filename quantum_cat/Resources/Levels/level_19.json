@@ -1,0 +1,151 @@
+{
+    "id": 19,
+    "name": "Zig Zag",
+    "difficulty": 4,
+    "description": "Progress diagonally while avoiding the syncronized patrol patterns.",
+    "playerStart": {
+        "x": 50,
+        "y": 50
+    },
+    "exitPosition": {
+        "x": 1050,
+        "y": 650
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 100,
+                "y": 0
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 350,
+                "y": 150
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 600,
+                "y": 300
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 850,
+                "y": 450
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1100,
+                "y": 600
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [],
+    "observers": [
+        {
+            "position": {
+                "x": 450,
+                "y": 75
+            },
+            "rotation": 90,
+            "detectionAngle": 45,
+            "detectionRange": 250,
+            "patrolSpeed": 150,
+            "patrolPoints": [
+                {
+                    "x": 200,
+                    "y": 75
+                },
+                {
+                    "x": 700,
+                    "y": 75
+                }
+            ]
+        },
+        {
+            "position": {
+                "x": 700,
+                "y": 225
+            },
+            "rotation": 90,
+            "detectionAngle": 45,
+            "detectionRange": 250,
+            "patrolSpeed": 150,
+            "patrolPoints": [
+                {
+                    "x": 450,
+                    "y": 225
+                },
+                {
+                    "x": 950,
+                    "y": 225
+                }
+            ]
+        },
+        {
+            "position": {
+                "x": 950,
+                "y": 375
+            },
+            "rotation": 90,
+            "detectionAngle": 45,
+            "detectionRange": 250,
+            "patrolSpeed": 150,
+            "patrolPoints": [
+                {
+                    "x": 700,
+                    "y": 375
+                },
+                {
+                    "x": 1200,
+                    "y": 375
+                }
+            ]
+        }
+    ],
+    "orbs": [
+        {
+            "x": 350,
+            "y": 200
+        },
+        {
+            "x": 600,
+            "y": 350
+        },
+        {
+            "x": 850,
+            "y": 500
+        }
+    ],
+    "parTime": 40,
+    "requiredOrbs": 3,
+    "backgroundTheme": "space_blue"
+}

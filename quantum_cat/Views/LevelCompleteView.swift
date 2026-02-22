@@ -26,7 +26,7 @@ struct LevelCompleteView: View {
     }
 
     private var hasNextLevel: Bool {
-        return viewModel.currentLevel < 5
+        return viewModel.currentLevel < 30
     }
 
     var body: some View {

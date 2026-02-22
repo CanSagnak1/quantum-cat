@@ -22,6 +22,26 @@ struct LevelSelectView: View {
         ("Schrödinger's Maze", 4),
         ("Phase Shift", 4),
         ("Final Observation", 5),
+        ("Quantum Leap", 3),
+        ("Twin Sentinels", 3),
+        ("The Pendulum", 3),
+        ("Blind Spots", 4),
+        ("Orb Trail", 3),
+        ("Crossfire", 4),
+        ("The Void", 3),
+        ("Sniper Alley", 4),
+        ("Zig Zag", 4),
+        ("Observation Deck", 4),
+        ("Time Crunch", 5),
+        ("The Gauntlet", 5),
+        ("Quantum Maze", 4),
+        ("Intersection", 4),
+        ("Leap of Faith", 4),
+        ("The Spiral", 4),
+        ("Nowhere to Hide", 4),
+        ("Orb Heist", 4),
+        ("Entanglement", 5),
+        ("Superposition", 5)
     ]
 
     var body: some View {
@@ -58,7 +78,7 @@ struct LevelSelectView: View {
 
                 ScrollView {
                     VStack(spacing: 12) {
-                        ForEach(0..<10, id: \.self) { index in
+                        ForEach(0..<levelInfo.count, id: \.self) { index in
                             let levelId = index + 1
                             let info = levelInfo[index]
                             let isUnlocked =

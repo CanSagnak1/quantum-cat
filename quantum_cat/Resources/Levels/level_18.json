@@ -1,0 +1,100 @@
+{
+    "id": 18,
+    "name": "Sniper Alley",
+    "difficulty": 4,
+    "description": "Run across the long stretch, but watch out for the fast observer sweeps.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1200,
+        "y": 0
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 100,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 800,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 1150,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [],
+    "observers": [
+        {
+            "position": {
+                "x": 600,
+                "y": 250
+            },
+            "rotation": 270,
+            "detectionAngle": 30,
+            "detectionRange": 400,
+            "patrolSpeed": 350,
+            "patrolPoints": [
+                {
+                    "x": 200,
+                    "y": 250
+                },
+                {
+                    "x": 1000,
+                    "y": 250
+                }
+            ]
+        }
+    ],
+    "orbs": [
+        {
+            "x": 275,
+            "y": -20
+        },
+        {
+            "x": 625,
+            "y": -20
+        },
+        {
+            "x": 975,
+            "y": -20
+        }
+    ],
+    "parTime": 30,
+    "requiredOrbs": 3,
+    "backgroundTheme": "singularity"
+}

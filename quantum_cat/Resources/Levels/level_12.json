@@ -1,0 +1,120 @@
+{
+    "id": 12,
+    "name": "Twin Sentinels",
+    "difficulty": 3,
+    "description": "Two observers overlap their fields of vision. Wait for the perfect moment.",
+    "playerStart": {
+        "x": 50,
+        "y": 0
+    },
+    "exitPosition": {
+        "x": 1000,
+        "y": 0
+    },
+    "platforms": [
+        {
+            "position": {
+                "x": 100,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 400,
+                "y": -20
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 650,
+                "y": 20
+            },
+            "size": {
+                "width": 150,
+                "height": 25
+            },
+            "type": "normal"
+        },
+        {
+            "position": {
+                "x": 950,
+                "y": -50
+            },
+            "size": {
+                "width": 200,
+                "height": 25
+            },
+            "type": "normal"
+        }
+    ],
+    "betaPlatforms": [],
+    "observers": [
+        {
+            "position": {
+                "x": 500,
+                "y": 200
+            },
+            "rotation": 250,
+            "detectionAngle": 60,
+            "detectionRange": 300,
+            "patrolSpeed": 100,
+            "patrolPoints": [
+                {
+                    "x": 350,
+                    "y": 200
+                },
+                {
+                    "x": 600,
+                    "y": 200
+                }
+            ]
+        },
+        {
+            "position": {
+                "x": 600,
+                "y": 200
+            },
+            "rotation": 290,
+            "detectionAngle": 60,
+            "detectionRange": 300,
+            "patrolSpeed": 100,
+            "patrolPoints": [
+                {
+                    "x": 500,
+                    "y": 200
+                },
+                {
+                    "x": 750,
+                    "y": 200
+                }
+            ]
+        }
+    ],
+    "orbs": [
+        {
+            "x": 400,
+            "y": 30
+        },
+        {
+            "x": 525,
+            "y": 0
+        },
+        {
+            "x": 650,
+            "y": 70
+        }
+    ],
+    "parTime": 30,
+    "requiredOrbs": 3,
+    "backgroundTheme": "singularity"
+}
